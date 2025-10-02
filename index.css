@@ -3,7 +3,7 @@ https: //htmlcolorcodes.com/color-picker/
 https: //coolors.co/palettes/trending
 https: //easings.net/#easeInElastic
 https: //unsplash.com/de
-https://icons.getbootstrap.com/
+https: //icons.getbootstrap.com/
 
 h1 {
     color: rgb(250, 250, 250);
@@ -29,7 +29,7 @@ link {
 }
 
 body {
-    background: radial-gradient(#545352,#787574);
+    background: radial-gradient(#545352, #787574);
 }
 
 table+img {
@@ -78,6 +78,7 @@ button:hover {
 p::selection {
     background-color: #2d2319;
 }
+
 /* 
 #border {
     border-radius: 20ch;
@@ -163,7 +164,7 @@ input {
     margin-right: 2cm;
     transition: 3s;
     margin: 1;
-    
+
 }
 
 #imag :hover {
