@@ -1,95 +1,305 @@
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mahmoud Salehpour — Webdesigner &amp; Informatiker in Ausbildung</title>
-  <meta name="description" content="Mahmoud Salehpour — Webdesigner & Informatiker in Ausbildung. Portfolio, Projekte und Kontakt." />
+  <meta name="description"
+    content="Mahmoud Salehpour — Webdesigner & Informatiker in Ausbildung. Portfolio, Projekte und Kontakt." />
   <style>
     /* ====== Grund-Reset ====== */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background:#0b0b0b; /* fast schwarzer Hintergrund */
-      color:#e9e6e1;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
     }
 
-    :root{
-      --accent:#D4AF37; /* Gold */
-      --muted:rgba(233,230,225,0.08);
-      --card:#0f0f10;
-      --max-width:1100px;
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: #0b0b0b;
+      /* fast schwarzer Hintergrund */
+      color: #e9e6e1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+    }
+
+    :root {
+      --accent: #D4AF37;
+      /* Gold */
+      --muted: rgba(233, 230, 225, 0.08);
+      --card: #0f0f10;
+      --max-width: 1100px;
     }
 
     /* ====== Layout ====== */
-    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px
+    }
 
     /* ====== Navbar ====== */
-    .nav{
-      position:sticky;top:12px;z-index:40;margin:12px auto;max-width:var(--max-width);display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);
-      box-shadow:0 6px 20px rgba(0,0,0,0.6);
+    .nav {
+      position: sticky;
+      top: 12px;
+      z-index: 40;
+      margin: 12px auto;
+      max-width: var(--max-width);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
     }
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#b88f2a);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b0b0b}
-    .brand h1{font-size:1rem;font-weight:700;letter-spacing:0.2px}
-    .brand p{font-size:0.8rem;color:rgba(233,230,225,0.7);margin-top:2px}
 
-    nav a{color:rgba(233,230,225,0.9);text-decoration:none;margin-left:18px;font-weight:600}
-    nav a:hover{color:var(--accent)}
+    .brand {
+      display: flex;
+      gap: 14px;
+      align-items: center
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), #b88f2a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #0b0b0b
+    }
+
+    .brand h1 {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.2px
+    }
+
+    .brand p {
+      font-size: 0.8rem;
+      color: rgba(233, 230, 225, 0.7);
+      margin-top: 2px
+    }
+
+    nav a {
+      color: rgba(233, 230, 225, 0.9);
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600
+    }
+
+    nav a:hover {
+      color: var(--accent)
+    }
 
     /* Mobile nav button */
-    .nav-toggle{display:none;border:0;background:transparent;color:var(--accent);font-weight:700}
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--accent);
+      font-weight: 700
+    }
 
     /* ====== Hero ====== */
-    .hero{display:flex;align-items:center;gap:32px;padding:60px 24px}
-    .hero-left{flex:1}
-    .hero-right{width:320px}
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 60px 24px
+    }
 
-    h2.title{font-size:2.2rem;color:var(--accent);margin-bottom:8px}
-    h3.role{font-size:1.05rem;color:#f3efea;margin-bottom:14px}
-    p.lead{color:rgba(233,230,225,0.85);font-size:1rem;margin-bottom:18px}
+    .hero-left {
+      flex: 1
+    }
 
-    .cta{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--accent);color:#0b0b0b;font-weight:700;text-decoration:none}
-    .cta.secondary{background:transparent;border:1px solid rgba(233,230,225,0.08);color:rgba(233,230,225,0.9);margin-left:12px}
+    .hero-right {
+      width: 320px
+    }
+
+    h2.title {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 8px
+    }
+
+    h3.role {
+      font-size: 1.05rem;
+      color: #f3efea;
+      margin-bottom: 14px
+    }
+
+    p.lead {
+      color: rgba(233, 230, 225, 0.85);
+      font-size: 1rem;
+      margin-bottom: 18px
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #0b0b0b;
+      font-weight: 700;
+      text-decoration: none
+    }
+
+    .cta.secondary {
+      background: transparent;
+      border: 1px solid rgba(233, 230, 225, 0.08);
+      color: rgba(233, 230, 225, 0.9);
+      margin-left: 12px
+    }
 
     /* Profilkarte */
-    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,0.6);display:flex;flex-direction:column;gap:12px}
-    .avatar{width:100%;height:200px;border-radius:10px;background:linear-gradient(135deg,#1a1a1a,#0d0d0d);display:flex;align-items:center;justify-content:center;color:rgba(233,230,225,0.06);font-size:0.85rem}
-    .meta{display:flex;justify-content:space-between;align-items:center}
-    .meta .info{font-weight:600}
+    .profile-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .avatar {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(233, 230, 225, 0.06);
+      font-size: 0.85rem
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .meta .info {
+      font-weight: 600
+    }
 
     /* ====== Sektionen ====== */
-    section{padding:48px 24px}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .card h4{color:var(--accent);margin-bottom:8px}
+    section {
+      padding: 48px 24px
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px
+    }
+
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.02)
+    }
+
+    .card h4 {
+      color: var(--accent);
+      margin-bottom: 8px
+    }
 
     /* Projekte - einfache Vorschau */
-    .project-list{display:flex;flex-direction:column;gap:12px}
-    .project-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));}
-    .project-thumb{width:72px;height:48px;background:var(--muted);border-radius:6px;flex-shrink:0}
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .project-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.005));
+    }
+
+    .project-thumb {
+      width: 72px;
+      height: 48px;
+      background: var(--muted);
+      border-radius: 6px;
+      flex-shrink: 0
+    }
 
     /* Kontaktformular */
-    form.contact{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-    input,textarea{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
-    button[type=submit]{padding:12px;border-radius:999px;border:0;background:var(--accent);color:#0b0b0b;font-weight:700;cursor:pointer}
+    form.contact {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      background: transparent;
+      color: inherit
+    }
+
+    button[type=submit] {
+      padding: 12px;
+      border-radius: 999px;
+      border: 0;
+      background: var(--accent);
+      color: #0b0b0b;
+      font-weight: 700;
+      cursor: pointer
+    }
 
     /* Footer */
-    footer{padding:28px 24px;text-align:center;color:rgba(233,230,225,0.6);font-size:0.9rem}
+    footer {
+      padding: 28px 24px;
+      text-align: center;
+      color: rgba(233, 230, 225, 0.6);
+      font-size: 0.9rem
+    }
 
     /* ====== Responsive ====== */
-    @media (max-width:900px){
-      .hero{flex-direction:column-reverse}
-      .hero-right{width:100%}
-      nav{display:none}
-      .nav-toggle{display:inline-block}
+    @media (max-width:900px) {
+      .hero {
+        flex-direction: column-reverse
+      }
+
+      .hero-right {
+        width: 100%
+      }
+
+      nav {
+        display: none
+      }
+
+      .nav-toggle {
+        display: inline-block
+      }
     }
   </style>
 </head>
+
 <body>
   <!-- NAVBAR -->
   <header class="nav" role="banner">
@@ -101,7 +311,8 @@
       </div>
     </div>
 
-    <nav class="container" aria-label="Hauptnavigation" style="display:flex;align-items:center;justify-content:flex-end">
+    <nav class="container" aria-label="Hauptnavigation"
+      style="display:flex;align-items:center;justify-content:flex-end">
       <a href="#about">Über mich</a>
       <a href="#projects">Projekte</a>
       <a href="#contact">Kontakt</a>
@@ -114,7 +325,8 @@
       <div class="hero-left">
         <h2 class="title">Hi — ich bin Mahmoud</h2>
         <h3 class="role">Webdesigner &amp; Informatiker in Ausbildung</h3>
-        <p class="lead">Ich gestalte moderne, performante Websites mit Fokus auf gutes Design und klare Nutzerführung. Zurzeit sammle ich Praxiserfahrung im Bereich Webentwicklung und UI/UX.</p>
+        <p class="lead">Ich gestalte moderne, performante Websites mit Fokus auf gutes Design und klare Nutzerführung.
+          Zurzeit sammle ich Praxiserfahrung im Bereich Webentwicklung und UI/UX.</p>
         <div>
           <a class="cta" href="#projects">Meine Projekte</a>
           <a class="cta secondary" href="#contact">Kontakt</a>
@@ -141,8 +353,10 @@
 
           <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
             <!-- Social / Kontakt-Buttons (Platzhalter) -->
-            <a href="#contact" style="text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.02);font-weight:600">Kontakt</a>
-            <a href="#projects" style="text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.02);font-weight:600">Portfolio</a>
+            <a href="#contact"
+              style="text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.02);font-weight:600">Kontakt</a>
+            <a href="#projects"
+              style="text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.02);font-weight:600">Portfolio</a>
           </div>
         </div>
       </aside>
@@ -152,7 +366,10 @@
     <section id="about">
       <div class="card">
         <h4>Über mich</h4>
-        <p style="color:rgba(233,230,225,0.8)">Ich bin ein angehender Informatiker mit einer Leidenschaft für Webdesign. Ich kombiniere technische Grundlagen mit gutem Design, um klare und nutzerfreundliche Interfaces zu bauen. Ich lerne aktuell moderne Frontend-Techniken (HTML, CSS, JavaScript) und arbeite an realen Projekten, um Erfahrung zu sammeln.</p>
+        <p style="color:rgba(233,230,225,0.8)">Ich bin ein angehender Informatiker mit einer Leidenschaft für Webdesign.
+          Ich kombiniere technische Grundlagen mit gutem Design, um klare und nutzerfreundliche Interfaces zu bauen. Ich
+          lerne aktuell moderne Frontend-Techniken (HTML, CSS, JavaScript) und arbeite an realen Projekten, um Erfahrung
+          zu sammeln.</p>
       </div>
     </section>
 
@@ -164,7 +381,8 @@
           <div class="project-thumb"></div>
           <div>
             <strong>Portfolio Website</strong>
-            <div style="font-size:0.92rem;color:rgba(233,230,225,0.7)">Persönliche Webseite mit responsive Layout und Fokus auf Typografie.</div>
+            <div style="font-size:0.92rem;color:rgba(233,230,225,0.7)">Persönliche Webseite mit responsive Layout und
+              Fokus auf Typografie.</div>
           </div>
         </div>
 
@@ -172,7 +390,8 @@
           <div class="project-thumb"></div>
           <div>
             <strong>Hotel-Webseite (Übung)</strong>
-            <div style="font-size:0.92rem;color:rgba(233,230,225,0.7)">Design und Prototyp für eine Hotel-Reservierungsseite.</div>
+            <div style="font-size:0.92rem;color:rgba(233,230,225,0.7)">Design und Prototyp für eine
+              Hotel-Reservierungsseite.</div>
           </div>
         </div>
 
@@ -180,7 +399,8 @@
           <div class="project-thumb"></div>
           <div>
             <strong>Landingpage – Restaurant</strong>
-            <div style="font-size:0.92rem;color:rgba(233,230,225,0.7)">Einseitige Landingpage mit CTA und Menü-Integration.</div>
+            <div style="font-size:0.92rem;color:rgba(233,230,225,0.7)">Einseitige Landingpage mit CTA und
+              Menü-Integration.</div>
           </div>
         </div>
       </div>
@@ -190,16 +410,19 @@
     <section id="contact">
       <h4 style="color:var(--accent);margin-bottom:12px">Kontakt</h4>
 
-      <p style="color:rgba(233,230,225,0.8);margin-bottom:12px">Schreibe mir eine Nachricht — ich antworte so schnell wie möglich. (Bitte ersetze die Platzhalter-E-Mail unten durch deine echte Adresse.)</p>
+      <p style="color:rgba(233,230,225,0.8);margin-bottom:12px">Schreibe mir eine Nachricht — ich antworte so schnell
+        wie möglich. (Bitte ersetze die Platzhalter-E-Mail unten durch deine echte Adresse.)</p>
 
-      <form class="contact" onsubmit="event.preventDefault();alert('Formular-Submit: Dies ist ein Platzhalter — implementiere hier deinen Form-Handler oder ersetze durch ein mailto-Link.');">
+      <form class="contact"
+        onsubmit="event.preventDefault();alert('Formular-Submit: Dies ist ein Platzhalter — implementiere hier deinen Form-Handler oder ersetze durch ein mailto-Link.');">
         <input type="text" name="name" placeholder="Dein Name" required>
         <input type="email" name="email" placeholder="Deine E‑Mail" required>
         <textarea name="message" rows="6" placeholder="Deine Nachricht" required></textarea>
         <button type="submit">Nachricht senden</button>
       </form>
 
-      <p style="margin-top:14px;color:rgba(233,230,225,0.6)">E‑Mail (Platzhalter): <strong>deine.email@beispiel.com</strong></p>
+      <p style="margin-top:14px;color:rgba(233,230,225,0.6)">E‑Mail (Platzhalter):
+        <strong>mahmodsalehpor@yahoo.com</strong></p>
     </section>
 
   </main>
@@ -213,4 +436,5 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
