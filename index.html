@@ -358,7 +358,7 @@
             <a href="#contact"
               style="text-decoration:none;padding:8px 12px;border-radius:8px;background:rgb(157, 157, 155);font-weight:600">Kontakt</a>
             <a href="#projects"
-              style="text-decoration:none;padding:8px 12px;border-radius:8px;background:rgb(160, 160, 157);font-weight:600">Portfolio</a>
+              style="text-decoration:none;padding:8px 12px;border-radius:8px;background:rgb(160, 160, 157);font-weight:600 ">Portfolio</a>
           </div>
         </div>
       </aside>
@@ -415,13 +415,13 @@
       <p style="color:rgba(233,230,225,0.8);margin-bottom:12px">Schreibe mir eine Nachricht — ich antworte so schnell
         wie möglich. (Bitte ersetze die Platzhalter-E-Mail unten durch deine echte Adresse.)</p>
 
-      <form action="mailto:mahmodsalehpor@yahoo.com" method="post" enctype="text/plain">
-  <input type="text" name="name" placeholder="Ihr Name" required>
-  <input type="email" name="email" placeholder="Ihre E-Mail" required>
-  <textarea name="message" rows="6" placeholder="Ihre Nachricht" required></textarea>
-  <button type="submit">Nachricht senden</button>
-</form>
-
+      <form class="contact "
+        onsubmit="event.preventDefault();alert('Formular-Submit: Dies ist ein Platzhalter — implementiere hier deinen Form-Handler oder ersetze durch ein mailto-Link.');">
+        <input type="text" name="name" placeholder="Dein Name" required>
+        <input type="email" name="email" placeholder="Deine E‑Mail" required>
+        <textarea name="message" rows="6" placeholder="Deine Nachricht" required></textarea>
+        <button type="submit">Nachricht senden</button>
+      </form>
 
       <p style="margin-top:14px;color:rgba(233,230,225,0.6)">E‑Mail:
         <strong>mahmodsalehpor@yahoo.com</strong>
