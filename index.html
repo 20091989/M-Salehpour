@@ -256,9 +256,12 @@
     textarea {
       padding: 12px;
       border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(234, 227, 227, 0.536);
       background: transparent;
-      color: inherit
+      color: #fdfcf8;
+      placeholder {
+        color: rgb(255, 254, 253)
+      }
     }
 
     button[type=submit] {
@@ -295,6 +298,11 @@
 
       .nav-toggle {
         display: inline-block
+      }
+      .placeholder {
+        color: rgb(40, 36, 36);
+        font-size: 0.85rem;
+        color
       }
     }
   </style>
@@ -338,7 +346,7 @@
           <!-- AVATAR: hier kannst du ein Bild einfügen. Aktuell Platzhalter. -->
           <div class="avatar">
             <!-- Wenn du ein Foto hast, ersetze dieses div durch: <img src="pfad/zum/foto.jpg" alt="Mahmoud Salehpour" style="width:100%;height:100%;object-fit:cover;border-radius:8px"> -->
-            <img src="PXA_250901_23139.jpg" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:8px"
+            <img src="PXA_250901_23139.jpg" alt="" style="width:100%;height:auto;"
               quality="auto">
           </div>
 
@@ -415,9 +423,9 @@
       <p style="color:rgba(233,230,225,0.8);margin-bottom:12px">Schreibe mir eine Nachricht — ich antworte so schnell
         wie möglich. (Bitte ersetze die Platzhalter-E-Mail unten durch deine echte Adresse.)</p>
 
-      <form class="contact "
+      <form  class="contact "
         onsubmit="event.preventDefault();alert('Formular-Submit: Dies ist ein Platzhalter — implementiere hier deinen Form-Handler oder ersetze durch ein mailto-Link.');">
-        <input type="text" name="name" placeholder="Dein Name" required>
+        <input type="text" name="name" placeholder="Dein Name" required ">
         <input type="email" name="email" placeholder="Deine E‑Mail" required>
         <textarea name="message" rows="6" placeholder="Deine Nachricht" required></textarea>
         <button type="submit">Nachricht senden</button>
